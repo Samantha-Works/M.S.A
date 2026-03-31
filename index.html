@@ -426,7 +426,9 @@ function renderMeta(){
   els.openCount.textContent = open;
   els.lockedValue.textContent = board.locked ? 'Yes' : 'No';
 
-  const pot = numericAmount();
+  const perSquare = numericAmount();
+  const pot = perSquare * 100;
+
   els.potValue.textContent = money(pot);
   els.p1.textContent = money(pot * 0.60);
   els.p2.textContent = money(pot * 0.30);
